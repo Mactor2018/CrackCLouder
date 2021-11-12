@@ -1,5 +1,5 @@
 
-// CrackClouder2.03Dlg.cpp : ÊµÏÖÎÄ¼ş
+// CrackClouder2.03Dlg.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -14,20 +14,20 @@
 #endif
 
 
-// ÓÃÓÚÓ¦ÓÃ³ÌĞò¡°¹ØÓÚ¡±²Ëµ¥ÏîµÄ CAboutDlg ¶Ô»°¿ò
+// ç”¨äºåº”ç”¨ç¨‹åºâ€œå…³äºâ€èœå•é¡¹çš„ CAboutDlg å¯¹è¯æ¡†
 
 class CAboutDlg : public CDialogEx
 {
 public:
 	CAboutDlg();
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_ABOUTBOX };
 
 	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 
-// ÊµÏÖ
+// å®ç°
 protected:
 	DECLARE_MESSAGE_MAP()
 };
@@ -45,7 +45,7 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CCrackClouder203Dlg ¶Ô»°¿ò
+// CCrackClouder203Dlg å¯¹è¯æ¡†
 
 
 
@@ -79,15 +79,15 @@ BEGIN_MESSAGE_MAP(CCrackClouder203Dlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CCrackClouder203Dlg ÏûÏ¢´¦Àí³ÌĞò
+// CCrackClouder203Dlg æ¶ˆæ¯å¤„ç†ç¨‹åº
 
 BOOL CCrackClouder203Dlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
-	// ½«¡°¹ØÓÚ...¡±²Ëµ¥ÏîÌí¼Óµ½ÏµÍ³²Ëµ¥ÖĞ¡£
+	// å°†â€œå…³äº...â€èœå•é¡¹æ·»åŠ åˆ°ç³»ç»Ÿèœå•ä¸­ã€‚
 
-	// IDM_ABOUTBOX ±ØĞëÔÚÏµÍ³ÃüÁî·¶Î§ÄÚ¡£
+	// IDM_ABOUTBOX å¿…é¡»åœ¨ç³»ç»Ÿå‘½ä»¤èŒƒå›´å†…ã€‚
 	ASSERT((IDM_ABOUTBOX & 0xFFF0) == IDM_ABOUTBOX);
 	ASSERT(IDM_ABOUTBOX < 0xF000);
 
@@ -105,14 +105,14 @@ BOOL CCrackClouder203Dlg::OnInitDialog()
 		}
 	}
 
-	// ÉèÖÃ´Ë¶Ô»°¿òµÄÍ¼±ê¡£  µ±Ó¦ÓÃ³ÌĞòÖ÷´°¿Ú²»ÊÇ¶Ô»°¿òÊ±£¬¿ò¼Ü½«×Ô¶¯
-	//  Ö´ĞĞ´Ë²Ù×÷
-	SetIcon(m_hIcon, TRUE);			// ÉèÖÃ´óÍ¼±ê
-	SetIcon(m_hIcon, FALSE);		// ÉèÖÃĞ¡Í¼±ê
+	// è®¾ç½®æ­¤å¯¹è¯æ¡†çš„å›¾æ ‡ã€‚  å½“åº”ç”¨ç¨‹åºä¸»çª—å£ä¸æ˜¯å¯¹è¯æ¡†æ—¶ï¼Œæ¡†æ¶å°†è‡ªåŠ¨
+	//  æ‰§è¡Œæ­¤æ“ä½œ
+	SetIcon(m_hIcon, TRUE);			// è®¾ç½®å¤§å›¾æ ‡
+	SetIcon(m_hIcon, FALSE);		// è®¾ç½®å°å›¾æ ‡
 
-	// TODO:  ÔÚ´ËÌí¼Ó¶îÍâµÄ³õÊ¼»¯´úÂë
-	CString text = _T("±¾³ÌĞòÒÑÔÚGithubÉÏ¿ªÔ´¡£\nThis Programme is OPEN SOURCE on GITHUB!!");
-	CString title = _T("±¾³ÌĞòÒÑÔÚGithubÉÏ¿ªÔ´¡£\nThis Programme is OPEN SOURCE on GITHUB!!");
+	// TODO:  åœ¨æ­¤æ·»åŠ é¢å¤–çš„åˆå§‹åŒ–ä»£ç 
+	CString text = _T("æœ¬ç¨‹åºå·²åœ¨Githubä¸Šå¼€æºã€‚\nThis Programme is OPEN SOURCE on GITHUB!!");
+	CString title = _T("æœ¬ç¨‹åºå·²åœ¨Githubä¸Šå¼€æºã€‚\nThis Programme is OPEN SOURCE on GITHUB!!");
 	if (
 		MessageBoxW(text, title, MB_ICONINFORMATION | MB_YESNO)
 		== IDYES
@@ -123,14 +123,14 @@ BOOL CCrackClouder203Dlg::OnInitDialog()
 		CDialogEx::OnOK();
 	}
 	
-	m_Font.CreatePointFont(120, _T("Î¢ÈíÑÅºÚ"), NULL);
+	m_Font.CreatePointFont(120, _T("å¾®è½¯é›…é»‘"), NULL);
 	m_static.SetFont(&m_Font, true);
-	m_static.SetWindowText(_T("±¾³ÌĞòÒÑÔÚGithubÉÏ¿ªÔ´¡£\nThis Programme is OPEN SOURCE on GITHUB!!"));
+	m_static.SetWindowText(_T("æœ¬ç¨‹åºå·²åœ¨Githubä¸Šå¼€æºã€‚\nThis Programme is OPEN SOURCE on GITHUB!!"));
 	
 	
-	//±äÁ¿bt1ÓÃÓÚÅĞ¶Ïµã»÷×´Ì¬
+	//å˜é‡bt1ç”¨äºåˆ¤æ–­ç‚¹å‡»çŠ¶æ€
 	int bt1 = 0;
-	return TRUE;  // ³ı·Ç½«½¹µãÉèÖÃµ½¿Ø¼ş£¬·ñÔò·µ»Ø TRUE
+	return TRUE;  // é™¤éå°†ç„¦ç‚¹è®¾ç½®åˆ°æ§ä»¶ï¼Œå¦åˆ™è¿”å› TRUE
 }
 
 void CCrackClouder203Dlg::OnSysCommand(UINT nID, LPARAM lParam)
@@ -146,19 +146,19 @@ void CCrackClouder203Dlg::OnSysCommand(UINT nID, LPARAM lParam)
 	}
 }
 
-// Èç¹ûÏò¶Ô»°¿òÌí¼Ó×îĞ¡»¯°´Å¥£¬ÔòĞèÒªÏÂÃæµÄ´úÂë
-//  À´»æÖÆ¸ÃÍ¼±ê¡£  ¶ÔÓÚÊ¹ÓÃÎÄµµ/ÊÓÍ¼Ä£ĞÍµÄ MFC Ó¦ÓÃ³ÌĞò£¬
-//  Õâ½«ÓÉ¿ò¼Ü×Ô¶¯Íê³É¡£
+// å¦‚æœå‘å¯¹è¯æ¡†æ·»åŠ æœ€å°åŒ–æŒ‰é’®ï¼Œåˆ™éœ€è¦ä¸‹é¢çš„ä»£ç 
+//  æ¥ç»˜åˆ¶è¯¥å›¾æ ‡ã€‚  å¯¹äºä½¿ç”¨æ–‡æ¡£/è§†å›¾æ¨¡å‹çš„ MFC åº”ç”¨ç¨‹åºï¼Œ
+//  è¿™å°†ç”±æ¡†æ¶è‡ªåŠ¨å®Œæˆã€‚
 
 void CCrackClouder203Dlg::OnPaint()
 {
 	if (IsIconic())
 	{
-		CPaintDC dc(this); // ÓÃÓÚ»æÖÆµÄÉè±¸ÉÏÏÂÎÄ
+		CPaintDC dc(this); // ç”¨äºç»˜åˆ¶çš„è®¾å¤‡ä¸Šä¸‹æ–‡
 
 		SendMessage(WM_ICONERASEBKGND, reinterpret_cast<WPARAM>(dc.GetSafeHdc()), 0);
 
-		// Ê¹Í¼±êÔÚ¹¤×÷Çø¾ØĞÎÖĞ¾ÓÖĞ
+		// ä½¿å›¾æ ‡åœ¨å·¥ä½œåŒºçŸ©å½¢ä¸­å±…ä¸­
 		int cxIcon = GetSystemMetrics(SM_CXICON);
 		int cyIcon = GetSystemMetrics(SM_CYICON);
 		CRect rect;
@@ -166,7 +166,7 @@ void CCrackClouder203Dlg::OnPaint()
 		int x = (rect.Width() - cxIcon + 1) / 2;
 		int y = (rect.Height() - cyIcon + 1) / 2;
 
-		// »æÖÆÍ¼±ê
+		// ç»˜åˆ¶å›¾æ ‡
 		dc.DrawIcon(x, y, m_hIcon);
 	}
 	else
@@ -175,8 +175,8 @@ void CCrackClouder203Dlg::OnPaint()
 	}
 }
 
-//µ±ÓÃ»§ÍÏ¶¯×îĞ¡»¯´°¿ÚÊ±ÏµÍ³µ÷ÓÃ´Ëº¯ÊıÈ¡µÃ¹â±ê
-//ÏÔÊ¾¡£
+//å½“ç”¨æˆ·æ‹–åŠ¨æœ€å°åŒ–çª—å£æ—¶ç³»ç»Ÿè°ƒç”¨æ­¤å‡½æ•°å–å¾—å…‰æ ‡
+//æ˜¾ç¤ºã€‚
 HCURSOR CCrackClouder203Dlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
@@ -186,25 +186,25 @@ HCURSOR CCrackClouder203Dlg::OnQueryDragIcon()
 
 void CCrackClouder203Dlg::OnStnClickedText1()
 {
-	// TODO:  ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO:  åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 }
 
 
 void CCrackClouder203Dlg::OnBnClickedButton1()
 {
-	// TODO:  ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
-	// TODO:  ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO:  åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
+	// TODO:  åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 
 	/*	if (
 	FileE(_T("C:\\Program Files\\iClass\\StudentClient\\StudentClient.exe"))
 	== TRUE
 	)
 	*/
-	if (-1 != GetFileAttributes(_T("C:\\Program Files\\iClass\\StudentClient"))) //Èç¹ûÎÄ¼ş¼Ğ´æÔÚ£¬ ×îºóµÄ\\ºÅÓĞÎŞ¶¼Ã»¹ØÏµ
+	if (-1 != GetFileAttributes(_T("C:\\Program Files\\iClass\\StudentClient"))) //å¦‚æœæ–‡ä»¶å¤¹å­˜åœ¨ï¼Œ æœ€åçš„\\å·æœ‰æ— éƒ½æ²¡å…³ç³»
 	{
-		//ÎÄ¼ş´æÔÚ ½âËø°´Å¥
+		//æ–‡ä»¶å­˜åœ¨ è§£é”æŒ‰é’®
 		if (
-			MessageBoxW(_T("¼ì²âÍê±Ï£¡Äã¿ÉÒÔÊ¹ÓÃÁË¡£ ºó¹û×Ô¸ºÅ¶~\nÊÇ·ñ¾ö¶¨³Ğµ£Ò»ÇĞ¸ºµ£¼°ÔğÈÎ²¢¿ªÊ¼Ê¹ÓÃ£¿"), _T("ÌáÊ¾ | By Mactor | blog.mactor.xyz"), MB_ICONASTERISK | MB_YESNO)
+			MessageBoxW(_T("æ£€æµ‹å®Œæ¯•ï¼ä½ å¯ä»¥ä½¿ç”¨äº†ã€‚ åæœè‡ªè´Ÿå“¦~\næ˜¯å¦å†³å®šæ‰¿æ‹…ä¸€åˆ‡è´Ÿæ‹…åŠè´£ä»»å¹¶å¼€å§‹ä½¿ç”¨ï¼Ÿ"), _T("æç¤º | By Mactor "), MB_ICONASTERISK | MB_YESNO)
 			== IDYES)
 		{
 			m_button1.EnableWindow(1);
@@ -213,7 +213,7 @@ void CCrackClouder203Dlg::OnBnClickedButton1()
 		else
 		{
 			if (
-				MessageBoxW(_T("ÄÇ¾ÍÍË³ö°É£¿"), _T("È·ÈÏÍË³ö | By Mactor |blog.mactor.xyz"), MB_ICONQUESTION | MB_YESNO)
+				MessageBoxW(_T("é‚£å°±é€€å‡ºå§ï¼Ÿ"), _T("ç¡®è®¤é€€å‡º | By Mactor "), MB_ICONQUESTION | MB_YESNO)
 				== IDYES
 				)
 			{
@@ -224,34 +224,34 @@ void CCrackClouder203Dlg::OnBnClickedButton1()
 	}
 	else
 	{
-		MessageBoxW(_T("Î´¼ì²âµ½ÎÄ¼ş£¡"), _T("ÌáÊ¾ | By Mactor |blog.mactor.xyz"), MB_ICONERROR | MB_OK);
+		MessageBoxW(_T("æœªæ£€æµ‹åˆ°æ–‡ä»¶ï¼"), _T("æç¤º | By Mactor "), MB_ICONERROR | MB_OK);
 	}
 }
 
 
 void CCrackClouder203Dlg::OnNMClickSyslink1(NMHDR *pNMHDR, LRESULT *pResult)
 {
-	// TODO:  ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO:  åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	
 	*pResult = 0;
 
 /*	
-ÎÒµÄ²©¿ÍÒòÊ±¼äÔ­Òò ÒÑÍ£ÔË  Òò´Ë×¢ÊÍÁË
-ShellExecute(0, NULL, _T("http://blog.mactor.xyz"), NULL, NULL, SW_NORMAL);
-	MessageBoxW(_T("ÕıÔÚÌø×ª ÇëÉÔºó..»¶Ó­·ÃÎÊ£¡£¡\n PS:Èô³öÏÖÂÒÂëÇëÊ¹ÓÃChromeä¯ÀÀÆ÷´ò¿ª"), _T("Mactor | blog.mactor.xyz"), MB_OK);
+æˆ‘çš„åšå®¢å› æ—¶é—´åŸå›  å·²åœè¿  å› æ­¤æ³¨é‡Šäº†
+ShellExecute(0, NULL, _T("http:/{DELETED}"), NULL, NULL, SW_NORMAL);
+	MessageBoxW(_T("æ­£åœ¨è·³è½¬ è¯·ç¨å..æ¬¢è¿è®¿é—®ï¼ï¼\n PS:è‹¥å‡ºç°ä¹±ç è¯·ä½¿ç”¨Chromeæµè§ˆå™¨æ‰“å¼€"), _T("Mactor | {DELETED}"), MB_OK);
 */
 }
 
 
 void CCrackClouder203Dlg::OnBnClickedButton3()
 {
-	// TODO:  ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO:  åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	char oldname[80] = "C:\\Program Files\\iClass\\StudentClient\\StudentClient.exe", newname[80] = "C:\\Program Files\\iClass\\StudentClient\\MactorCracked.mctx";
 
 	if (rename(oldname, newname) == 0)
 	{
 		if (
-			MessageBoxW(_T("ÆÆ½âÍê³É£¡µã»÷È·¶¨ÖØÆôÍê³ÉÍÑ¿Ø£¡"), _T("ÆÆ½â³É¹¦ "), MB_OK | MB_ICONINFORMATION)
+			MessageBoxW(_T("ç ´è§£å®Œæˆï¼ç‚¹å‡»ç¡®å®šé‡å¯å®Œæˆè„±æ§ï¼"), _T("ç ´è§£æˆåŠŸ "), MB_OK | MB_ICONINFORMATION)
 			== IDOK
 			){
 			system("start /b shutdown -r -t 1 ");
@@ -262,7 +262,7 @@ void CCrackClouder203Dlg::OnBnClickedButton3()
 	}
 	else
 	{
-		MessageBoxW(_T("ÆÆ½âÊ§°Ü£¡Çë¼ì²éÎÄ¼şÊÇ·ñ±»Õ¼ÓÃ»ò¸ÃÆÆ½â·½·¨±»ºÍĞ³¿ÉÁªÏµ×÷Õß·´À¡¡£"), _T("Error 102: ÆÆ½âÊ§°Ü"), MB_OK | MB_ICONERROR);
+		MessageBoxW(_T("ç ´è§£å¤±è´¥ï¼è¯·æ£€æŸ¥æ–‡ä»¶æ˜¯å¦è¢«å ç”¨æˆ–è¯¥ç ´è§£æ–¹æ³•è¢«å’Œè°å¯è”ç³»ä½œè€…åé¦ˆã€‚"), _T("Error 102: ç ´è§£å¤±è´¥"), MB_OK | MB_ICONERROR);
 	}
 
 }
@@ -270,9 +270,9 @@ void CCrackClouder203Dlg::OnBnClickedButton3()
 
 void CCrackClouder203Dlg::OnBnClickedButton4()
 {
-	// Ê¹ÓÃ±Ø¶Á
-	CString text = _T("»¶Ó­Ê¹ÓÃ£¡±¾³ÌĞòÄ¿µÄÊÇÎªÁË°ïÖú¸÷Î»ÔÚÒ»¶¨ÌØÊâĞèÒªÏÂÍÑÀë½ÌÊ¦µÄ¿ØÖÆ£¬ÇëÎğÓÃÓÚÆäËûÓÃÍ¾£¬½â³ı¿ØÖÆºóÇë¾¡¿ì»Ö¸´¿ØÖÆ£¡ÇëÎğÓÃ±¾³ÌĞòÓÃÓÚÆäËüÓÃÍ¾£¡Ê¹ÓÃ³ÌĞòÒıÆğµÄÒ»ÇĞºó¹û£¨°üÀ¨µ«²»ÏŞÓÚ¾­¼ÃËğÊ§¡¢ÎÄ¼şµÈ£©¾ù¹éÊ¹ÓÃÕß×ÔĞĞ³Ğµ££¡\n×÷Õß£ºMactor QQ2760502461  ¸öÈË²©¿Í: blog.mactor.xyz\n±¾Èí¼ş×îÖÕ½âÊÍÈ¨¹é×÷ÕßËùÓĞ£¡\n\nµã»÷¡°ÊÇ¡±¼´´ú±íÄãÍêÈ«Í¬Òâ²¢³ĞÅµ×ñÊØÒÔÉÏÄÚÈİ! Èô²»Í¬Òâ»ò²»³ĞÅµ£¬Çëµã»÷¡°·ñ¡±ÍË³ö²¢Á¢¿Ì½«±¾³ÌĞò´ÓÄãµÄ¼ÆËã»úÉÏÉ¾³ı£¡");
-	CString title = _T("±Ø¶Á - ÖØÒªÌáÊ¾");
+	// ä½¿ç”¨å¿…è¯»
+	CString text = _T("æ¬¢è¿ä½¿ç”¨ï¼"); //2021-11-12åˆ å»éƒ¨åˆ†ä¸ªäººä¿¡æ¯
+	CString title = _T("å¿…è¯» - é‡è¦æç¤º");
 	if (
 		MessageBoxW(text, title, MB_ICONINFORMATION | MB_YESNO)
 		== IDYES
@@ -289,14 +289,14 @@ void CCrackClouder203Dlg::OnBnClickedButton4()
 
 void CCrackClouder203Dlg::OnBnClickedButton2()
 {
-	//Ò»¼ü»¹Ô­
+	//ä¸€é”®è¿˜åŸ
 
 	char oldname[80] = "C:\\Program Files\\iClass\\StudentClient\\StudentClient.exe", newname[80] = "C:\\Program Files\\iClass\\StudentClient\\MactorCracked.mctx";
 
 	if (rename(newname, oldname) == 0)
 	{
 		if (
-			MessageBoxW(_T("ÒÑ»Ö¸´ÎÄ¼ş£¡¼´½«Á¬½ÓÉÏ½ÌÊ¦µçÄÔ¡£\nPS:Èç¹ûÏëÔÙ´Î½â³ı¿ØÖÆ£¬Äã»¹¿ÉÒÔÊ¹ÓÃ±¾Èí¼ş"), _T("ÒÑ»Ö¸´£¡ "), MB_OK | MB_ICONINFORMATION)
+			MessageBoxW(_T("å·²æ¢å¤æ–‡ä»¶ï¼å³å°†è¿æ¥ä¸Šæ•™å¸ˆç”µè„‘ã€‚\nPS:å¦‚æœæƒ³å†æ¬¡è§£é™¤æ§åˆ¶ï¼Œä½ è¿˜å¯ä»¥ä½¿ç”¨æœ¬è½¯ä»¶"), _T("å·²æ¢å¤ï¼ "), MB_OK | MB_ICONINFORMATION)
 			== IDOK
 			){
 			//system("start /b C:\\Program Files\\iClass\\StudentClient\\StudentClient.exe");
@@ -310,8 +310,8 @@ void CCrackClouder203Dlg::OnBnClickedButton2()
 
 void CCrackClouder203Dlg::OnBnClickedButton5()
 {
-	// Ğ¶ÔØ
-	MessageBoxW(_T("±ØĞëÔÚÒÑ½â³ı¿ØÖÆºó²Å¿ÉÒÔĞ¶ÔØ£¬·ñÔòĞ¶ÔØ²»³É¹¦\nPS:ÀÁµÃ¸ã¼ìÑéÁË"), _T("ÌáÊ¾ | By Mactor"), MB_ICONINFORMATION | MB_OK);
+	// å¸è½½
+	MessageBoxW(_T("å¿…é¡»åœ¨å·²è§£é™¤æ§åˆ¶åæ‰å¯ä»¥å¸è½½ï¼Œå¦åˆ™å¸è½½ä¸æˆåŠŸ\nPS:æ‡’å¾—ææ£€éªŒäº†"), _T("æç¤º | By Mactor"), MB_ICONINFORMATION | MB_OK);
 	//system("C:\\Program Files\\iClass\\StudentClient\\uninstall.exe");
 	ShellExecute(NULL, _T("open"), _T("C:\\Program Files\\iClass\\StudentClient\\uninstall.exe"), NULL, NULL, SW_SHOWNORMAL);
 
@@ -320,8 +320,8 @@ void CCrackClouder203Dlg::OnBnClickedButton5()
 
 void CCrackClouder203Dlg::OnBnClickedButton7()
 {
-	// TODO:  ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
-	//°æÈ¨
+	// TODO:  åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
+	//ç‰ˆæƒ
 	CaboutDlg  aboutDlg;
 	aboutDlg.DoModal();
 }
@@ -329,15 +329,15 @@ void CCrackClouder203Dlg::OnBnClickedButton7()
 
 void CCrackClouder203Dlg::OnBnClickedButton9()
 {
-	// TODO:  ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
-	//¸üĞÂÈÕÖ¾
+	// TODO:  åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
+	//æ›´æ–°æ—¥å¿—
 	GxDlg GxMsg;
 	GxMsg.DoModal();
 
 	
 	/*
 	
-	m_Font.CreatePointFont(120, _T("Î¢ÈíÑÅºÚ"), NULL);
+	m_Font.CreatePointFont(120, _T("å¾®è½¯é›…é»‘"), NULL);
 	m_static.SetFont(&m_Font, true);
 	*/
 }
